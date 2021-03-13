@@ -8,8 +8,10 @@
 
 import Foundation
 
-public struct GitDiff: Codable {
+public struct GitDiff: Codable, Identifiable {
 
+    public var id = UUID()
+    
     public var previousFilePath: String
 
     public var updatedFilePath: String

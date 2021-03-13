@@ -8,8 +8,10 @@
 
 import Foundation
 
-public struct GitHunk: Codable {
+public struct GitHunk: Codable, Identifiable {
 
+    public var id = UUID()
+    
     private var text: String
 
     public var oldLineStart = 0
