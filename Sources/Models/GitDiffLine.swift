@@ -14,8 +14,10 @@ public enum LineType: String, Codable {
     case deletion
 }
 
-public struct GitDiffLine: Codable {
+public struct GitDiffLine: Codable, Identifiable {
 
+    public var id = UUID()
+    
     public var type: String
 
     public var text: String
